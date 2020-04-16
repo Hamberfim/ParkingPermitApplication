@@ -1,13 +1,22 @@
 package dmacc.beans;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="vehicles")
 public class Vehicle {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+	
 	private String make;
 	private String model;
 	private String color;
 	private String platenumber;
 	
+	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+	@JoinColumn(name="studentid", nullable = false)
 	private Student student;
 
 	public Vehicle() {
@@ -22,7 +31,6 @@ public class Vehicle {
 		this.platenumber = platenumber;
 		this.student = student;
 	}
-
 
 	public long getId() {
 		return id;
@@ -77,6 +85,5 @@ public class Vehicle {
 		return "Vehicle [id=" + id + ", make=" + make + ", model=" + model + ", color=" + color + ", platenumber="
 				+ platenumber + ", student=" + student + "]";
 	}
-	
-	
+
 }
