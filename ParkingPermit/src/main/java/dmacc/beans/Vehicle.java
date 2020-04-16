@@ -1,5 +1,6 @@
 package dmacc.beans;
 
+//import all
 import javax.persistence.*;
 
 @Entity

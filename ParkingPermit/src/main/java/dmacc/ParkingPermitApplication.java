@@ -21,12 +21,12 @@ public class ParkingPermitApplication {
 	public CommandLineRunner mappingRepos(StudentRepository studentRepository, VehicleRepository vehicleRepository) {
 		return args -> {
 			
-			//create new student
+			//create new student   -- works
 			Student student = new Student("Larry", "Boladaire", null);
 			//save the student
 			studentRepository.save(student);
 			
-			//create and save new vehicles
+			//create and save new vehicles -- works
 			vehicleRepository.save(new Vehicle("Ford", "Escort", "Blue", "KRT177", student));
 			
 		};

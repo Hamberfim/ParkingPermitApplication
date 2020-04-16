@@ -1,6 +1,7 @@
 package dmacc.beans;
 
 import java.util.Set;
+//import all
 import javax.persistence.*;
 
 
