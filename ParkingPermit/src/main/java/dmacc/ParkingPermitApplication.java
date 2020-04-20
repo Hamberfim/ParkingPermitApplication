@@ -22,12 +22,12 @@ public class ParkingPermitApplication {
 		return args -> {
 			
 			//create new student   -- works
-			Student student = new Student("Larry", "Boladaire", null);
+			//Student student = new Student("Larry", "Boladaire", null);
 			//save the student
-			studentRepository.save(student);
+			//studentRepository.save(student);
 			
 			//create and save new vehicles -- works
-			vehicleRepository.save(new Vehicle("Ford", "Escort", "Blue", "KRT177", student));
+			//vehicleRepository.save(new Vehicle("Ford", "Escort", "Blue", "KRT177", student));
 			
 		};
 		
