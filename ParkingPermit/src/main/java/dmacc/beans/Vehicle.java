@@ -4,6 +4,7 @@ package dmacc.beans;
 import javax.persistence.*;
 
 @Entity
+@Embeddable
 @Table(name="vehicles")
 public class Vehicle {
 	
