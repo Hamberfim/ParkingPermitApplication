@@ -1,13 +1,20 @@
 package dmacc.beans;
 
+import java.io.Serializable;
+
 //import all
 import javax.persistence.*;
 
 @Entity
 @Embeddable
 @Table(name="vehicles")
-public class Vehicle {
+public class Vehicle implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
@@ -18,7 +25,7 @@ public class Vehicle {
 	private String platenumber;
 	
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
-	@JoinColumn(name="studentid", nullable = false)
+	@JoinColumn(name="studentid")
 	private Student student;
 
 	public Vehicle() {

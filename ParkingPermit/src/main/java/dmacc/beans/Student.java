@@ -1,5 +1,8 @@
 package dmacc.beans;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 //import all
 import javax.persistence.*;
@@ -7,8 +10,13 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="student")
-public class Student {
+public class Student implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
@@ -17,13 +25,14 @@ public class Student {
 	private String lastname;
 	
 	@OneToMany(mappedBy = "student", fetch = FetchType.LAZY)
-	private Set<Vehicle> vehicle;
+	private List<Vehicle> vehicle = new ArrayList<>();
+
 
 	public Student() {
 		super();
 	}
 
-	public Student(String firstname, String lastname, Set<Vehicle> vehicle) {
+	public Student(String firstname, String lastname, List<Vehicle> vehicle) {
 		super();
 		this.firstname = firstname;
 		this.lastname = lastname;
@@ -54,12 +63,16 @@ public class Student {
 		this.lastname = lastname;
 	}
 
-	public Set<Vehicle> getVehicle() {
+	public List<Vehicle> getVehicle() {
 		return vehicle;
 	}
 
-	public void setVehicle(Set<Vehicle> vehicle) {
+	public void setVehicle(List<Vehicle> vehicle) {
 		this.vehicle = vehicle;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 	@Override
@@ -67,5 +80,7 @@ public class Student {
 		return "Student [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", vehicle=" + vehicle
 				+ "]";
 	}
+
+	
 	
 }
