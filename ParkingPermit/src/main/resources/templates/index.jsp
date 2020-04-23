@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -8,13 +9,13 @@
 <title>Student Parking Permit Application</title>
 </head>
 <body>
-<div th:replace="/header :: header"> </div><br />
-	<div align="center" class="container-fluid">
-		<h4>Student Vehicle List</h4>
-		
+
+	<div align="center">
+		<h1>Student Record List</h1>
+		<a href="/new">Enter New Student Record</a> <br />
 		<br />
-		<table border="1" cellpadding="7" class="table table-bordered table-striped table-hover">
-			<thead class="thead-dark">
+		<table border="1" cellpadding="7">
+			<thead>
 				<tr>
 					<th>Id</th>
 					<th>First Name</th>
@@ -44,8 +45,6 @@
 			</tbody>
 		</table>
 	</div>
-	<br />
-	<div th:replace="/footer :: footer"> </div>
  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

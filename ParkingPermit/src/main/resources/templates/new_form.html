@@ -8,33 +8,34 @@
 <title>New Student Record</title>
 </head>
 <body>
-	<div align="center">
-		<h1>Enter New Student Record</h1>
+<div th:replace="/header :: header"> </div><br />
+	<div align="center" class="container-fluid">
+		<h4>New Student Form</h4>
 		<br />
 		<form action="#" th:action="@{/save}" th:object="${student}" onsubmit="return validateForm()"method="post" name="registration" id="registration">
-		<table border="1" cellpadding="8">
+		<table border="1" cellpadding="8" class="table-bordered table-striped table-hover">
 		<tr>
-			<td>First Name: </td>
+			<td class="table-dark">First Name: </td>
 			<td><input type="text" th:field="*{firstname}" name="firstname" id="firstname"></td>
 		</tr>
 		<tr>
-			<td>Last Name: </td>
+			<td class="table-dark">Last Name: </td>
 			<td><input type="text" th:field="*{lastname}" name="lastname" id="lastname"></td>
 		</tr>
 		<tr>
-			<td>Car Make: </td>
+			<td class="table-dark">Car Make: </td>
 			<td><input type="text" th:field="*{make}" name="make" id="make"></td>
 		</tr>
 		<tr>
-			<td>Model: </td>
+			<td class="table-dark">Model: </td>
 			<td><input type="text" th:field="*{model}" name="model" id="model"></td>
 		</tr>
 		<tr>
-			<td>Color: </td>
+			<td class="table-dark">Color: </td>
 			<td><input type="text" th:field="*{color}" name="color" id="color"></td>
 		</tr>
 		<tr>
-			<td>Plate Number: </td>
+			<td class="table-dark">Plate Number: </td>
 			<td><input type="text" th:field="*{platenumber}" name="platenumber" id="platenumber"></td>
 		</tr>
 		<tr>
@@ -43,6 +44,8 @@
 		</table>
 		</form>
 	</div>
+	<br />
+	<div th:replace="/footer :: footer"> </div>
  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
