@@ -10,7 +10,8 @@ function validateForm() {
     alert("Last name must be filled out");
     return false;
   }
-  
+
+
   var x = document.forms["registration"]["make"].value;
   if (x == "") {
     alert("Car make must be filled out");
@@ -33,6 +34,6 @@ function validateForm() {
   if (x == "") {
     alert("Car plate number must be filled out");
     return false;
-  }
+  } 
   
 }
