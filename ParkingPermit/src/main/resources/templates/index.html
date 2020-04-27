@@ -13,29 +13,29 @@
 		<h4>Student Vehicle List</h4>
 		
 		<br />
-		<table border="1" cellpadding="7" class="table table-bordered table-striped table-hover">
+		<table border="1" cellpadding="7" class="table table-bordered table-striped table-hover w-75">
 			<thead class="thead-dark">
 				<tr>
-					<th>Id</th>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th>Car Make</th>
-					<th>Model</th>
-					<th>Color</th>
-					<th>Plate Number</th>
-					<th>Actions</th>
+					<th class="text-nowrap">Id</th>
+					<th class="text-nowrap">First Name</th>
+					<th class="text-nowrap">Last Name</th>
+					<th class="text-nowrap">Car Make</th>
+					<th class="text-nowrap">Model</th>
+					<th class="text-nowrap">Color</th>
+					<th class="text-nowrap">Plate Number</th>
+					<th class="text-nowrap">Actions</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr th:each="student : ${listStudent}">
-					<td th:text="${student.id}">ID</td>
-					<td th:text="${student.firstname}">First Name</td>
-					<td th:text="${student.lastname}">Last Name</td>
-					<td th:text="${student.make}">Make</td>
-					<td th:text="${student.model}">Model</td>
-					<td th:text="${student.color}">Color</td>
-					<td th:text="${student.platenumber}">Plate Number</td>
-					<td>
+					<td class="text-nowrap" th:text="${student.id}">ID</td>
+					<td class="text-nowrap" th:text="${student.firstname}">First Name</td>
+					<td class="text-nowrap" th:text="${student.lastname}">Last Name</td>
+					<td class="text-nowrap" th:text="${student.make}">Make</td>
+					<td class="text-nowrap" th:text="${student.model}">Model</td>
+					<td class="text-nowrap" th:text="${student.color}">Color</td>
+					<td class="text-nowrap" th:text="${student.platenumber}">Plate Number</td>
+					<td class="text-nowrap">
 						<a th:href="@{'/edit/' + ${student.id}}">Edit</a>
                     	&nbsp;&nbsp;&nbsp;
                     	<a th:href="@{'/delete/' + ${student.id}}">Delete</a>
