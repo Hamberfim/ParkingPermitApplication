@@ -14,28 +14,29 @@
 		<br />
 		<form action="#" th:action="@{/save}" th:object="${student}" onsubmit="return validateForm()" method="post" name="registration" id="registration">
 		<table border="1" cellpadding="8" class="table-bordered table-striped table-hover">
+		<style type="text/css">#tblHeaders {background-color:#00234c; color:white;}</style>
 		<tr>
-			<td class="table-dark">First Name: </td>
+			<td id="tblHeaders">First Name: </td>
 			<td><input type="text" th:field="*{firstname}" name="firstname" id="firstname"></td> 
 		</tr>
 		<tr>
-			<td class="table-dark">Last Name: </td>
+			<td id="tblHeaders">Last Name: </td>
 			<td><input type="text" th:field="*{lastname}" name="lastname" id="lastname"></td>
 		</tr>
 		<tr>
-			<td class="table-dark">Car Make: </td>
+			<td id="tblHeaders">Car Make: </td>
 			<td><input type="text" th:field="*{make}" name="make" id="make"></td>
 		</tr>
 		<tr>
-			<td class="table-dark">Model: </td>
+			<td id="tblHeaders">Model: </td>
 			<td><input type="text" th:field="*{model}" name="model" id="model"></td>
 		</tr>
 		<tr>
-			<td class="table-dark">Color: </td>
+			<td id="tblHeaders">Color: </td>
 			<td><input type="text" th:field="*{color}" name="color" id="color"></td>
 		</tr>
 		<tr>
-			<td class="table-dark">Plate Number: </td>
+			<td id="tblHeaders">Plate Number: </td>
 			<td><input type="text" th:field="*{platenumber}" name="platenumber" id="platenumber"></td>
 		</tr>
 		<tr>
