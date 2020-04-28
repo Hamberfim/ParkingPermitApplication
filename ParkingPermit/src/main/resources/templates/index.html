@@ -36,9 +36,11 @@
 					<td class="text-nowrap" th:text="${student.color}">Color</td>
 					<td class="text-nowrap" th:text="${student.platenumber}">Plate Number</td>
 					<td class="text-nowrap">
-						<a th:href="@{'/edit/' + ${student.id}}">Edit</a>
+					<style type="text/css">#ediLink:hover {background-color:#4caf50; color:white; border-radius: 3px; }</style>
+						<a id="ediLink" title="Edit Record" th:href="@{'/edit/' + ${student.id}}">Edit</a>
                     	&nbsp;&nbsp;&nbsp;&nbsp;
-                    	<a th:href="@{'/delete/' + ${student.id}}">Delete</a>
+                    <style type="text/css">#deleteLink:hover {background-color:#dd0031; color:white; border-radius: 3px; }</style>
+                    	<a id="deleteLink" title="Immediate Delete - Can't be undone!" th:href="@{'/delete/' + ${student.id}}">Delete</a>
 					</td>
 				</tr>
 			</tbody>
